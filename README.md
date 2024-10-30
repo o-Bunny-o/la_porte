@@ -36,22 +36,19 @@
 1. Clonez ce dépôt sur votre machine locale.
    ```
    git clone <https://github.com/o-Bunny-o/la_porte/>
-
 2. Accédez au répertoire du projet.
     ```
     cd la_porte
-    
 3. Installez les dépendances :
+    ```
+    npm install
+## Utilisation
 
-
-npm install
-Utilisation
-Démarrez le serveur.
-
-
-npm start
-Ouvrez votre navigateur et allez à http://localhost:81 pour accéder au jeu.
-Règles du jeu
+1. Démarrez le serveur.
+    ```
+    npm start
+2. Ouvrez votre navigateur et allez à http://localhost:81 pour accéder au jeu.
+## Règles du jeu
 But : Atteindre la porte avec la clé pour s’échapper.
 Déplacement : Utilisez les flèches du clavier pour bouger vers le haut, le bas, la gauche ou la droite.
 Ramassage de la clé : Déplacez-vous vers la case contenant la clé pour la ramasser.
