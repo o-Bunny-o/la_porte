@@ -1,0 +1,17 @@
+[
+  {
+    "name": "player1",
+    "password": "pass123",
+    "points": 60
+  },
+  {
+    "name": "player2",
+    "password": "pass456",
+    "points": 70
+  },
+  {
+    "name": "lalala",
+    "password": "lalala123",
+    "points": 60
+  }
+]

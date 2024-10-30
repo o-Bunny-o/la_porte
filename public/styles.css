@@ -1,0 +1,300 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: black;
+    background-image: url('/assets/doors.jpg');
+    background-size: cover;           /* Ensures the image covers the entire viewport */
+    background-position: center;      /* Centers the image on the page */
+    background-repeat: no-repeat;     /* Prevents tiling the image */
+    background-attachment: fixed;     /* Keeps the background fixed when scrolling */
+    color: #fff;                      /* Adjust text color for readability */
+    font-family: Arial, sans-serif;   /* Optional: Sets a font style for the website */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Black overlay with 50% opacity */
+    z-index: -1; /* Ensures overlay is behind content */
+}
+    
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 20px 0;
+    margin-bottom: 50px;
+}
+
+/* Flex container to separate links and user info */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px; /* Optional: Set max width for alignment */
+    margin: 0 auto;    /* Center container within the page */
+    padding: 0 20px;
+}
+
+/* Navigation Links Styling */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ff0000;
+}
+
+/* User Info Section (aligned to the right) */
+#user-info {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    margin-left: auto; /* Push user info to the far right */
+}
+
+#user-info span {
+    margin-right: 10px;
+}
+
+#logout-button {
+    padding: 10px;        /* Increased padding for more space around the text */
+    background-color: #ff4d4d;
+    color: white;
+    font-size: 16px;           /* Font size remains bold and clear */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;        /* Slightly larger border radius for a rounded look */
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+#logout-button:hover {
+    background-color: #e60000;
+}
+
+
+
+/* Center the statistics section content */
+#statistics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height for vertical centering */
+    flex-direction: column;
+    text-align: center;
+}
+
+#stats-title {
+    margin-bottom: 50px;
+}
+
+#player-info {
+    margin-top: 50px;
+}
+
+
+/* Statistics Table Styling */
+#stats-table {
+    width: 70%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: #240000;
+    color: white;           /* Set default text color */
+    text-align: left;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Add subtle shadow for contrast */
+    margin: 0 auto;         /* Center table horizontally */
+}
+
+#stats-table th, #stats-table td, #stats-table tds {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+#stats-table th {
+    background-color: #000000;
+    color: white;
+}
+
+#stats-table tr:hover {
+    background-color: #f1f1f1;
+    color: #000; /* Text color changes to black on hover */
+}
+
+
+/* Modal Styling */
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+/* Modal Content Styling */
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    width: 400px;             /* Increased width */
+    max-width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;       /* Center-align content */
+    color: #000;
+}
+
+/* Close Button Styling */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: #000;
+}
+
+/* Form Elements */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;                 /* Add spacing between form elements */
+    margin-top: 10px;
+    text-align: left;
+}
+
+.modal-content label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Button Styling */
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background-color: #af4c4c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.modal-content button:hover {
+    background-color: #a04545;
+}
+
+#signup-button {
+    background-color: #ff0000;
+    margin-top: 10px;
+}
+
+#signup-button:hover {
+    background-color: #d90000;
+}
+
+
+
+
+/* Show or Hide Signup Form */
+#signup-form {
+    display: none;
+}
+
+/* Game Board Styling */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px); /* 8 columns */
+    grid-template-rows: repeat(8, 50px);    /* 8 rows */
+    gap: 5px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+/* Game Board Styling */
+#game-board .cell {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+#game-board .player::before {
+    content: "🦄"; /* Unicorn emoji */
+    font-size: 24px;
+}
+
+#game-board .enemy::before {
+    content: "👹"; /* Ogre emoji */
+    font-size: 24px;
+    color: red;
+}
+
+#game-board .key::before {
+    content: "🔑"; /* Key emoji */
+}
+
+#game-board .door::before {
+    content: "🚪"; /* Door emoji */
+}
+
+#desc {
+    margin: 20px;
+}
+
+h1, li{
+    text-transform: uppercase;
+}
+
+#user-info {
+    display: flex;
+    flex-direction: left;
+}

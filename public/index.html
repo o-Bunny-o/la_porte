@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Porte Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+<!-- Navbar -->
+<nav>
+    <div class="nav-container">
+        <ul>
+            <li><a href="#" data-tab="home" class="tab-link active">Accueil</a></li>
+            <li><a href="#" data-tab="how-to-play" class="tab-link">Comment jouer</a></li>
+            <li><a href="#" data-tab="statistics" class="tab-link">Statistiques</a></li>
+            <li><a href="#" data-tab="play" class="tab-link" id="play-link">Jouer</a></li>
+        </ul>
+        
+        <!-- User Info Section (aligned to the right) -->
+        <div id="user-info" style="display: none;">
+            <span id="user-name"></span> [&nbsp;
+            <span id="user-score"></span> pts ]
+            <button id="logout-button">Déconnexion</button>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Main Content Sections -->
+    <div id="home" class="tab-content">
+        <h1>Bienvenue à La Porte</h1>
+        <section id="desc">
+        <p>Explorez les onglets pour en savoir plus, voir les statistiques ou commencer à jouer!</p>
+        </section>
+    </div>
+
+    <div id="how-to-play" class="tab-content" style="display: none;">
+        <h1>Comment jouer</h1>
+    <section id="desc">
+        <p>Le but est d'atteindre la porte avec une clé. Évitez les ennemis et naviguez dans la grille !</p>
+    </section>
+    </div>
+
+    <!-- Statistics Tab -->
+    <div id="statistics" class="tab-content" style="display: none;">
+        <h1 id="stats-title">Statistiques</h1>
+        <table id="stats-table">
+            <thead>
+                <tr>
+                    <th>Joueur</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Player statistics will be dynamically loaded here -->
+            </tbody>
+        </table>
+    </div>    
+
+    <!-- Play Tab: Game Board Section -->
+    <div id="play" class="tab-content" style="display: none;">
+        <h1>Jouer</h1>
+        <div id="player-info" style="display: none;">
+            <span id="player-name"></span> [<span id="player-score"></span> pts]
+            <button id="logout-button">Déconnexion</button>
+        </div>
+        <div id="game-board"></div>
+    </div>
+
+    <!-- Login/Signup Modal -->
+<div id="login-modal" class="modal">
+    <div class="modal-content">
+        <!-- Close button for modal -->
+        <span class="close-button" id="close-modal">&times;</span>
+        
+        <!-- Login Form -->
+        <h2>Connexion</h2>
+        <form id="login-form">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required autocomplete="username">
+            
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required autocomplete="current-password">
+            
+            <button type="submit">Connexion</button>
+        </form>
+        
+        <p id="login-error" style="color: red; display: none;">Nom d'utilisateur ou mot de passe invalide.</p>
+        
+        <!-- Sign Up Button -->
+        <button id="signup-button">Inscription</button>
+        
+        <!-- Signup Form (hidden by default) -->
+        <div id="signup-form" style="display: none;">
+            <h2>Inscription</h2>
+            <form id="register-form">
+                <label for="new-username">Nom d'utilisateur :</label>
+                <input type="text" id="new-username" required>
+                
+                <label for="new-password">Mot de passe :</label>
+                <input type="password" id="new-password" required>
+                
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+    <script src="client.js"></script>
+</body>
+</html>
