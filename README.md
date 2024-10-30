@@ -75,5 +75,5 @@
 ## Licence
 - Ce projet est sous licence MIT - voir le fichier LICENSE pour plus de détails.
 
-Remerciements
-Développé avec Node.js et le framework Express.
+## Remerciements
+- Développé avec Node.js et le framework Express.
